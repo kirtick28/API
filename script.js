@@ -1,6 +1,7 @@
 const button = document.getElementById('btn');
 const jokeContent = document.getElementById('jokecontent');
 const joke = document.getElementById('joke');
+const image = document.getElementById('image');
 
 button.onclick = () => {
   axios
@@ -17,4 +18,11 @@ button.onclick = () => {
       jokeContent.textContent = 'Something went wrong';
       joke.textContent = '';
     });
+  axios.get('https://dog.ceo/api/breeds/image/random').then((response) => {
+    image.src = response.data.message;
+  });
+
+  axios.get('https://x-colors.yurace.pro/api/random').then((response) => {
+    document.body.style.backgroundColor = response.data.hex;
+  });
 };
