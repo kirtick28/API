@@ -17,11 +17,13 @@ button.onclick = () => {
       jokeContent.textContent = 'Something went wrong';
       joke.textContent = '';
     });
-  axios.get('https://dog.ceo/api/breeds/image/random').then((response) => {
-    image.src = response.data.message;
-  });
-
   axios.get('https://x-colors.yurace.pro/api/random').then((response) => {
     document.body.style.backgroundColor = response.data.hex;
+  });
+};
+
+image.onclick = () => {
+  axios.get('https://dog.ceo/api/breeds/image/random').then((response) => {
+    image.src = response.data.message;
   });
 };

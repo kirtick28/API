@@ -45,4 +45,5 @@ img {
   margin-top: 10px;
   height: 500px;
   width: auto;
+  cursor: pointer;
 }
