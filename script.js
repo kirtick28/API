@@ -11,7 +11,6 @@ button.onclick = () => {
       jokeContent.textContent = response.data.setup;
       joke.textContent = '';
       joke.textContent = response.data.punchline;
-      setTimeout(function () {}, 2000);
     })
     .catch(function (error) {
       console.error(error);
